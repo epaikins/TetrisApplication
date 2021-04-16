@@ -253,7 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //game over
     function gameOver() {
         if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-            scoreDisplay.innerHTML = 'end'
+            alert(`Game Over \nYour score is ${scoreDisplay.textContent}`)
+            // scoreDisplay.innerHTML = 'end'
             clearInterval(timerId)
         }
     }
